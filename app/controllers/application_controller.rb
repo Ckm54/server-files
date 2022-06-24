@@ -55,7 +55,7 @@ class ApplicationController < Sinatra::Base
       scientific_name: parame[:scientific_name],
       description: params[:description],
       locations: params[:locations],
-      category_id: params[:category_id]
+      plant_category_id: params[:plant_category_id]
     )
     new_plant.to_json
   end
