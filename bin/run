@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby 
 
-require 'pry'
+# require 'pry'
 require_relative '../config/environment'
 
-binding.pry
-"pls"
+# binding.pry
+# "pls"
