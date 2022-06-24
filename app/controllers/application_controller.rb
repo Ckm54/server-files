@@ -7,6 +7,11 @@ class ApplicationController < Sinatra::Base
     categories.to_json
   end
 
+  post '/categories' do
+    new_category = PlantCategory.create(name: params[:name], image_url: params[:image_url])
+    new_category.to_json
+  end
+
   get '/categories/:id' do
     category = PlantCategory.find(params[:id])
     category.to_json(include: {plants: {
