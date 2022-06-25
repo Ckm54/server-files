@@ -27,7 +27,7 @@ class ApplicationController < Sinatra::Base
   get '/plants/:id' do
     plant_data = Plant.find(params[:id])
     plant_data.to_json(include: {
-      reviews: {only: [:name, :content, :created_at, :updated_at]},
+      reviews: {only: [:id, :name, :content, :created_at, :updated_at]},
       plant_category: {only: [:name, :image_url]}
     })
   end
