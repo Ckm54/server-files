@@ -32,6 +32,12 @@ class ApplicationController < Sinatra::Base
     })
   end
 
+  get '/plants/q=:query' do
+    # binding.pry
+    result = Plant.where('name LIKE ?', "%#{params[:query]}%").all
+    result.to_json
+  end
+
   delete '/plants/:id' do
     plant = Plant.find(params[:id])
     plant.reviews.destroy_all
