@@ -4,12 +4,18 @@ default: &default
   timeout: 5000
 
 development:
-  <<: *default
-  url: "postgresql://collo:71765543@localhost:5432/plants"
+  adapter: postgresql
+  encoding: unicode
+  database: blooming
+  pool: 5
+  username: kiplangat
+  password: 71765543   ### password you have specified within psql
+  host: localhost
+  port: 5432  
 
 test:
   <<: *default
-  url: "postgresql://collo:71765543@localhost:5432/plants"
+  url: "postgresql://kiplangat:71765543@localhost:5432/blooming"
 
 production:
   <<: *default
