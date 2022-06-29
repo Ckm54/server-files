@@ -32,7 +32,7 @@ class ApplicationController < Sinatra::Base
     })
   end
 
-  get '/plants/q=:query' do
+  get '/plants?q=:query' do
     # binding.pry
     result = Plant.where('name LIKE ?', "%#{params[:query]}%").all
     result.to_json

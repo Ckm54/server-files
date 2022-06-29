@@ -18,6 +18,10 @@ gem "rack-contrib", "~> 2.3"
 # https://github.com/cyu/rack-cors
 gem "rack-cors", "~> 1.1"
 
+gem 'bcrypt', '~> 3.1', '>= 3.1.18'
+
+gem "faker"
+
 # An object-relational mapper
 # https://guides.rubyonrails.org/active_record_basics.html
 gem "activerecord", "~> 6.1"
@@ -51,10 +55,8 @@ group :test do
   gem "rack-test", "~> 1.1"
   gem "rspec", "~> 3.10"
   gem "rspec-json_expectations", "~> 2.2"
-  gem "faker"
 end
 
 group :production do
   gem "pg"
-  gem "faker"
 end
