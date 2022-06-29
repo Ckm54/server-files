@@ -25,5 +25,6 @@ end
   Review.create(name: name, content: review, plant_id: p_id)
 end
 
+User.create(name: "collins", email: "collins@test.com", password: "foobar", password_confirmation: "foobar")
 
 puts "🌱 Done seeding!"
