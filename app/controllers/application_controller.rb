@@ -71,12 +71,12 @@ class ApplicationController < Sinatra::Base
     plant = Plant.find(params[:id])
     plant.update(
       name: params[:name],
-      thumbail_img: params[:thumbnail_img],
+      thumbnail_img: params[:thumbnail_img],
       cover_img: params[:cover_img],
-      scientific_name: parame[:scientific_name],
+      scientific_name: params[:scientific_name],
       description: params[:description],
       locations: params[:locations],
-      category_id: params[:category_id]
+      plant_category_id: params[:plant_category_id]
     )
   end
 end
